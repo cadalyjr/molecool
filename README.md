@@ -12,6 +12,11 @@ download this repository and type
 
 `pip insatall -e .`
 
+in the repository directory. This package requires the following:
+
+- NumPy
+- Matplotlib
+
 ### Copyright
 
 Copyright (c) 2020, Clyde Daly
