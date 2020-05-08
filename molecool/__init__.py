@@ -4,7 +4,11 @@ A Python package for analyzing and visualizing pdb and xyz files. For MolSSI May
 """
 
 # Add imports here
-from .functions import *
+from .functions import * #canvas
+# it's considered "bad practice" to import *, as opposed to specfic functions
+# this syntax leads to molecool.canvas
+#import molecool.functions
+# this syntax leads to molecool.functions.canvas
 
 # Handle versioneer
 from ._version import get_versions
