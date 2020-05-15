@@ -5,6 +5,11 @@ Files for working with pdb files
 import numpy as np
 
 def open_pdb(f_loc):
+    #try:
+    #    pass
+    #except Exception as e:
+    #    raise
+
     # This function reads in a pdb file and returns the atom names and coordinates.
     with open(f_loc) as f:
         data = f.readlines()
