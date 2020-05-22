@@ -6,8 +6,43 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from .atom_data import atom_colors
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
+    """
+    Draw a picture of a molecule using matplotlib.
+
+    Parameters
+    ----------
+    coordinates : np.adarray
+        The coordinates of each point in an (n, 3) array.
+
+    symbols : Array of strings
+        Array of chemical symbols with length n.
+
+    draw_bonds : Dictionary
+        Dictionary of items meant to be bonded to each other in the plot.
+        Default value: None i.e. no bonds are drawn.
+
+    save_location : string
+        Location for saving output. Default value: None i.e. output is not saved.
+
+    dpi : float or integer
+        DPI value for output. Default 300.
+
+    Returns
+    -------
+    ax : matplotlib axes object
+        The plot with the molecular/atomic information.
+
+    Examples
+    --------
+    >>> import numpy as np
+    >>> coordinates = np.array([[0.0, 0.0, 0.0], [0.0, 0.0, 1.0]])
+    >>> symbols = ['H', 'H']
+    >>> draw_molecule(coordinates, symbols)
+    <matplotlib.axes._subplots.Axes3DSubplot object at 0x1176c5a90>
+    """
     #what if coordinate and symbols lists have different lengths?
     #i.e. from diff molecules
     # Draw a picture of a molecule using matplotlib.
