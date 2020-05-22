@@ -29,6 +29,7 @@ def calculate_distance(rA, rB):
     if isinstance(rA, np.ndarray) is False or isinstance(rB, np.ndarray) is False:
             raise TypeError("rA and rB must be NumPy arrays")
     d=(rA-rB)
+    print(rA, rB)
     dist=np.linalg.norm(d)
     if dist == 0.0:
         raise Exception("Two atoms are located at the same point")
